@@ -1,0 +1,43 @@
+<div class="container">
+  <ul class="list-unstyled">
+
+    <div class="row">
+      <div class="col-sm-12">
+        <li class="card card-body bg-light mb-2">
+          <ol>
+            <li>
+              <mat-form-field>
+                <input matInput [(ngModel)]="name" placeholder="What's your name?">
+              </mat-form-field>
+            </li>
+            <li>
+              <button mat-raised-button (click)="openDialog()">Pick one</button>
+            </li>
+            <li *ngIf="animal">
+              You chose:
+              <i>{{animal}}</i>
+            </li>
+          </ol>
+        </li>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-sm-12">
+        <li class="card card-body bg-light mb-2">
+          <mat-form-field>
+            <input matInput value="Disco party!" placeholder="Message" #message>
+          </mat-form-field>
+
+          <mat-form-field>
+            <input matInput value="Dance" placeholder="Action" #action>
+          </mat-form-field>
+
+          <button mat-button (click)="openSnackBar(message.value, action.value)">Show snack-bar</button>
+        </li>
+      </div>
+    </div>
+
+  </ul>
+</div>

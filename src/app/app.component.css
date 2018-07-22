@@ -1,0 +1,6 @@
+.navbar-nav > li >a {
+    padding-left: 20px;
+    padding-right:20px;
+    font-size: 18px;
+    text-decoration: none;
+}
